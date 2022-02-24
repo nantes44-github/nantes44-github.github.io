@@ -1,6 +1,26 @@
 <html>
 <head>
 <title>Pixcases and Pixtapes Matcher</title>
+<script>
+const xhr = new XMLHttpRequest()
+xhr.open("GET", "{"GET":{"scheme":"https","host":"nfteyez.global","filename":"/api/accounts/4r9XVVbzwWWanB2whbjQa76WxxvrRaHTdxni8mT5wXab","query":{"sort_by":"authority"},"remote":{"Adresse":"10.22.22.40:8080"}}}")
+xhr.send()
+
+xhr.onload = function() {
+  if (xhr.status === 200) {
+    //parse JSON datax`x
+    data = JSON.parse(xhr.responseText)
+    console.log(data.count)
+  } else if (xhr.status === 404) {
+    console.log("No records found")
+  }
+}
+
+//triggered when a network-level error occurs with the request
+xhr.onerror = function() {
+  console.log("Network error occurred")
+}
+</script>
 </head>
   <body>
   <h1>Pixcases and Pixtapes Matcher</h1>
