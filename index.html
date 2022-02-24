@@ -2,8 +2,9 @@
 <head>
 <title>Pixcases and Pixtapes Matcher</title>
 <script>
+scan(){  
 const xhr = new XMLHttpRequest()
-xhr.open("GET", "{"GET":{"scheme":"https","host":"nfteyez.global","filename":"/api/accounts/4r9XVVbzwWWanB2whbjQa76WxxvrRaHTdxni8mT5wXab","query":{"sort_by":"authority"},"remote":{"Adresse":"10.22.22.40:8080"}}}")
+xhr.open("GET","https://nfteyez.global/api/accounts/4r9XVVbzwWWanB2whbjQa76WxxvrRaHTdxni8mT5wXab?sort_by=authority")
 xhr.send()
 
 xhr.onload = function() {
@@ -20,12 +21,13 @@ xhr.onload = function() {
 xhr.onerror = function() {
   console.log("Network error occurred")
 }
+}
 </script>
 </head>
   <body>
   <h1>Pixcases and Pixtapes Matcher</h1>
-  Wallet : <input></input><button>Go</button>
-<div>
+  Wallet : <input></input><button onclick="scan()">Go</button>
+<div id="result">
 Result
 </div>
   </body>
